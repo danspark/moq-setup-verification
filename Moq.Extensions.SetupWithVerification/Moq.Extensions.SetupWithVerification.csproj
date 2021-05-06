@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Moq.Extensions.SetupWithVerification</PackageId>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageId>MoqExtensions.SetupWithVerification</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
     <Authors>Daniel Reis</Authors>
     <Description>Extension method that helps creating setups and verifications with the same expression</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
