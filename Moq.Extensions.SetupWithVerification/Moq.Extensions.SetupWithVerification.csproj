@@ -11,12 +11,17 @@
     <Description>Extension method that helps creating setups and verifications with the same expression</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>moq extensions setup verify</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="moq" Version="4.16.1" />
