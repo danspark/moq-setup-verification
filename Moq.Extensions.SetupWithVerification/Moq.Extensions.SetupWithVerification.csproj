@@ -1,7 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Moq.Extensions.SetupWithVerification</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Daniel Reis</Authors>
+    <Description>Extension method that helps creating setups and verifications with the same expression</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>moq extensions setup verify</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
 </Project>
