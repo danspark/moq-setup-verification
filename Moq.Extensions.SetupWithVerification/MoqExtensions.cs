@@ -6,24 +6,28 @@ namespace Moq.Extensions.SetupWithVerification
 {
     public static class MoqExtensions
     {
-        public static MoqSetupWithVerification<TMocked> SetupWithVerification<TMocked>(this Mock<TMocked> mock, Expression<Action<TMocked>> expression,
+        public static Verification<TMocked> SetupWithVerification<TMocked>(this Mock<TMocked> mock, Expression<Action<TMocked>> expression,
             Func<Times> times, Action<ISetup<TMocked>> configureSetup = null) where TMocked : class
         {
             var setup = mock.Setup(expression);
 
             configureSetup?.Invoke(setup);
 
-            return new MoqSetupWithVerification<TMocked>(expression, times, mock);
+            setup.Verifiable();
+
+            return new Verification<TMocked>(expression, times, mock);
         }
 
-        public static MoqSetupWithVerification<TMocked, TResult> SetupWithVerification<TMocked, TResult>(this Mock<TMocked> mock,
+        public static Verification<TMocked, TResult> SetupWithVerification<TMocked, TResult>(this Mock<TMocked> mock,
             Expression<Func<TMocked, TResult>> expression, Func<Times> times, Action<ISetup<TMocked, TResult>> configureSetup = null) where TMocked : class
         {
             var setup = mock.Setup(expression);
 
             configureSetup?.Invoke(setup);
 
-            return new MoqSetupWithVerification<TMocked, TResult>(expression, times, mock);
+            setup.Verifiable();
+
+            return new Verification<TMocked, TResult>(expression, times, mock);
         }
     }
 }

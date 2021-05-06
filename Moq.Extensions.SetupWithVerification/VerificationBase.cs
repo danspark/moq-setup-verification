@@ -2,11 +2,11 @@ using System;
 
 namespace Moq.Extensions.SetupWithVerification
 {
-    public abstract class MoqSetupWithVerificationBase<TMocked> : IDisposable where TMocked : class
+    public abstract class VerificationBase<TMocked> : IDisposable where TMocked : class
     {
         public Mock<TMocked> Mock { get; set; }
 
-        protected MoqSetupWithVerificationBase(Mock<TMocked> mock = null)
+        protected VerificationBase(Mock<TMocked> mock = null)
         {
             Mock = mock ?? new Mock<TMocked>();
         }
