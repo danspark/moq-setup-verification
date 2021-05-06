@@ -12,6 +12,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>moq extensions setup verify</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/danspark/moq-setup-verification</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup>
